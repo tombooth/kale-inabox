@@ -1,0 +1,20 @@
+---
+classes:
+  - 'kale::java7'
+  - 'elasticsearch'
+  - 'oculus::elasticsearch'
+
+elasticsearch::cluster_name: 'elasticsearch-a'
+elasticsearch::host: "%{::hostname}"
+
+oculus::elasticsearch::root: '/var/lib/elasticsearch-elasticsearch-a'
+oculus::elasticsearch::service: 'elasticsearch-elasticsearch-a'
+
+ufw_rules:
+  allowelasticsearchhttp:
+    port: 9300
+    ip: 'any'
+  allowelasticsearchtcp:
+    port: 9200
+    ip: 'any'
+

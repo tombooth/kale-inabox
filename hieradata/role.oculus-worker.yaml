@@ -1,0 +1,12 @@
+---
+classes:
+  - oculus::worker
+  - oculus::config
+
+oculus::worker::redis_host: 'oculus'
+
+oculus::config::redis_host: 'oculus'
+oculus::config::skyline_host: 'skyline'
+oculus::config::elasticsearch_servers:
+  - 'http://elasticsearch-a:9200'
+  - 'http://elasticsearch-b:9200'

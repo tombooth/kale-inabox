@@ -1,0 +1,32 @@
+---
+classes:
+  - graphite
+
+graphite::gr_line_receiver_port: 2013
+graphite::gr_pickle_receiver_port: 2014
+
+graphite::gr_enable_carbon_relay: true
+graphite::gr_relay_line_port: 2003
+graphite::gr_relay_pickle_port: 2004
+graphite::gr_relay_destinations:
+  - '127.0.0.1:2014'
+  - 'skyline:2024'
+graphite::gr_relay_rules:
+  'all':
+    pattern: '.*'
+    destinations:
+      - '127.0.0.1:2014'
+      - 'skyline:2024'
+  'default':
+    'default': true
+    destinations:
+      - '127.0.0.1:2014:a'
+      - 'skyline:2024:a'
+
+ufw_rules:
+  allowgraphiterelay:
+    port: 2003
+    ip: 'any'
+  allowgraphitehttp:
+    port: 80
+    ip: 'any'

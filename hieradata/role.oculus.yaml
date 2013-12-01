@@ -1,0 +1,17 @@
+---
+classes:
+  - oculus::master
+  - oculus::config
+  - oculus::sync
+
+oculus::config::redis_host: 'localhost'
+oculus::config::skyline_host: 'skyline'
+oculus::config::elasticsearch_servers:
+  - 'http://elasticsearch-a:9200'
+  - 'http://elasticsearch-b:9200'
+
+ufw_rules:
+  allowoculusredis:
+    port: 6379
+    ip: 'any'
+

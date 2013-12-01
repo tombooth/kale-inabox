@@ -1,0 +1,17 @@
+---
+classes:
+  - skyline
+
+skyline::graphite_host: 'http://graphite'
+skyline::horizon_ip: '0.0.0.0'
+skyline::webapp_ip: '0.0.0.0'
+skyline::webapp_port: 80
+
+ufw_rules:
+  allowskylineredis:
+    port: 6379
+    ip: 'any'
+  allowskylinehttp:
+    port: 80
+    ip: 'any'
+

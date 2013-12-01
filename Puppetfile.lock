@@ -1,0 +1,71 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    footballradar/python (0.1.0)
+    thomasvandoren/redis (0.0.9)
+      maestrodev/wget (>= 0.0.0)
+      puppetlabs/gcc (>= 0.0.0)
+
+FORGE
+  remote: http://forge.puppetlabs.com/
+  specs:
+    attachmentgenie/ufw (1.2.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    jfryman/nginx (0.0.6)
+      puppetlabs/apt (>= 1.0.0)
+      puppetlabs/stdlib (>= 0.1.6)
+    maestrodev/wget (1.2.3)
+    pdxcat/collectd (1.0.0)
+      puppetlabs/stdlib (>= 3.0.0)
+    puppetlabs/apt (1.4.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/gcc (0.1.0)
+    puppetlabs/stdlib (4.1.0)
+    puppetlabs/vcsrepo (0.2.0)
+
+GIT
+  remote: /Users/tombooth/dev/kale/puppet-oculus
+  ref: master
+  sha: 344e5ae51741b7aa040d715c03e6837bf7aff759
+  specs:
+    oculus (0.1.0)
+      puppetlabs/stdlib (>= 4.1.0)
+      puppetlabs/vcsrepo (>= 0.2.0)
+
+GIT
+  remote: /Users/tombooth/dev/kale/puppet-skyline
+  ref: master
+  sha: 2f28844ce5f40c34438b9b028e81e9b7bfaac1dc
+  specs:
+    skyline (0.1.0)
+      footballradar/python (>= 0.1.0)
+      puppetlabs/stdlib (>= 4.1.0)
+      puppetlabs/vcsrepo (>= 0.2.0)
+      thomasvandoren/redis (>= 0.0.9)
+
+GIT
+  remote: https://github.com/echocat/puppet-graphite.git
+  ref: 860d13f89407451ed9175193f26fe8a82c8fdb54
+  sha: 860d13f89407451ed9175193f26fe8a82c8fdb54
+  specs:
+    graphite (0.0.1)
+
+GIT
+  remote: https://github.com/gds-operations/puppet-elasticsearch.git
+  ref: 5ce5eb454056e91482e8509599fe59ea2f04c06a
+  sha: 5ce5eb454056e91482e8509599fe59ea2f04c06a
+  specs:
+    elasticsearch (0.0.1)
+      puppetlabs/stdlib (>= 3.0.0)
+
+DEPENDENCIES
+  attachmentgenie/ufw (= 1.2.0)
+  elasticsearch (>= 0)
+  graphite (>= 0)
+  jfryman/nginx (= 0.0.6)
+  oculus (>= 0)
+  pdxcat/collectd (= 1.0.0)
+  puppetlabs/apt (= 1.4.0)
+  puppetlabs/stdlib (= 4.1.0)
+  skyline (>= 0)
+

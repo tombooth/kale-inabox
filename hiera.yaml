@@ -1,0 +1,8 @@
+:hierarchy:
+  - "role.%{::node_role}"
+  - "env.%{::environment}"
+  - common
+:backends:
+  - yaml
+:yaml:
+  :datadir: '/vagrant/hieradata'
